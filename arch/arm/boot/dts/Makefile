@@ -955,8 +955,7 @@ dtb-$(CONFIG_ARCH_MEDIATEK) += \
 dtb-$(CONFIG_ARCH_ZX) += zx296702-ad1.dtb
 dtb-$(CONFIG_ARCH_ASPEED) += aspeed-bmc-opp-palmetto.dtb \
 	aspeed-ast2500-evb.dtb
-
-dtb-y += infinity6b0-tc2101.dtb
+dtb-$(CONFIG_ARCH_SSTAR) += infinity6b0-tc2101.dtb
 
 endif
 
