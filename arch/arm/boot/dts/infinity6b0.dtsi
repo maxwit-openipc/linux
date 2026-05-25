@@ -531,11 +531,11 @@
         };
 
 
-        gpio:gpio{
+        gpio: gpio{
             compatible = "sstar,gpio";
         };
 
-        sound {
+        sound: sound {
             compatible = "sstar,audio";
             //reg = <0x1F000000 0x1000000>;
             interrupts=<GIC_SPI INT_IRQ_BACH IRQ_TYPE_LEVEL_HIGH>;
