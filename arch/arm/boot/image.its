@@ -1,0 +1,42 @@
+/dts-v1/;
+
+/ {
+    description = "Kernel Image with DTB";
+    #address-cells = <1>;
+
+    images {
+        kernel {
+            description = "Kernel for ssc337";
+            data = /incbin/("uImage");
+            type = "kernel";
+            arch = "arm";
+            os = "linux";
+            compression = "none";
+            load = <0x21000000>;
+            entry = <0x21000000>;
+            hash {
+                algo = "sha256";
+            };
+        };
+
+        fdt {
+            description = "DTB for tc2101";
+            data = /incbin/("dts/infinity6b0-tc2101.dtb");
+            type = "flat_dt";
+            arch = "arm";
+            compression = "none";
+            hash {
+                algo = "sha256";
+            };
+        };
+    };
+
+    configurations {
+        default = "board-tc2101";
+        board-tc2101 {
+            description = "Default Kernel Configuration";
+            kernel = "kernel";
+            fdt = "fdt";
+        };
+    };
+};
