@@ -7,7 +7,7 @@
     images {
         kernel {
             description = "Kernel for ssc337";
-            data = /incbin/("uImage");
+            data = /incbin/("zImage");
             type = "kernel";
             arch = "arm";
             os = "linux";
@@ -32,8 +32,8 @@
     };
 
     configurations {
-        default = "board-tc2101";
-        board-tc2101 {
+        default = "tc2101";
+        tc2101 {
             description = "Default Kernel Configuration";
             kernel = "kernel";
             fdt = "fdt";
